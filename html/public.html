@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>测试功能</title>
+		<link href="../css/mui.min.css" rel="stylesheet"/>
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link href="../css/public.css" rel="stylesheet"/>
+		<style type="text/css">
+			#popover{
+				height: 100px;
+				width:200px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell mui-collapse">
+				<a class="mui-navigate-right" href="#">面板1</a>
+				<div class="mui-collapse-content">
+					<p>面板1子内容</p>
+				</div>
+			</li>
+			<li class="mui-table-view-cell mui-collapse">
+				<a class="mui-navigate-right" href="#">面板</a>
+					<div class="mui-collapse-content">
+					<p>面板2子内容</p>
+				</div>
+			</li>
+			<li class="mui-table-view-cell mui-collapse">
+				<a class="mui-navigate-right" href="#">面板3</a>
+				<div class="mui-collapse-content">
+					<p>面板3子内容</p>
+				</div>
+			</li>
+		</ul>
+		<div id="sheet" class="mui-popover mui-popover-bottom mui-popover-action ">
+			<!-- 可选择菜单 -->
+			<ul class="mui-table-view">
+			  <li class="mui-table-view-cell">
+				<a href="#">菜单1</a>
+			  </li>
+			  <li class="mui-table-view-cell">
+				<a href="#">菜单2</a>
+			  </li>
+			</ul>
+			<!-- 取消菜单 -->
+			<ul class="mui-table-view">
+			  <li class="mui-table-view-cell">
+				<a href="#sheet1"><b>取消</b></a>
+			  </li>
+			</ul>
+		</div>
+		<a href="#sheet" id="openSheet" class="mui-btn mui-btn-primary mui-btn-block">打开操作表</a>
+	
+		<div id="popover" class="mui-popover">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell"><a href="#">Item1</a></li>
+						<li class="mui-table-view-cell"><a href="#">Item2</a></li>
+						<li class="mui-table-view-cell"><a href="#">Item3</a></li>
+						<li class="mui-table-view-cell"><a href="#">Item4</a></li>
+						<li class="mui-table-view-cell"><a href="#">Item5</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<a href="#popover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block">打开弹出菜单</a>
+		
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell"><a href="#">Item1</a>
+				<span class="mui-badge mui-badge-inverted">11</span>
+			</li>
+			<li class="mui-table-view-cell"><a href="#">Item2</a>
+				<span class="mui-badge mui-badge-primary mui-badge-inverted">22</span>
+			</li>
+			<li class="mui-table-view-cell"><a href="#">Item3</a>
+				<span class="mui-badge mui-badge-success mui-badge-inverted">33</span>
+			</li>
+			<li class="mui-table-view-cell"><a href="#">Item4</a>
+				<span class="mui-badge mui-badge-warning mui-badge-inverted">44</span>
+			</li>
+			<li class="mui-table-view-cell"><a href="#">Item5</a>
+				<span class="mui-badge mui-badge-danger mui-badge-inverted">55</span>
+			</li>
+			<li class="mui-table-view-cell"><a href="#">Item6</a>
+				<span class="mui-badge mui-badge-royal mui-badge-inverted">66</span>
+			</li>
+		</ul>
+		
+		<button type="button" class="mui-btn">默认</button>
+		<button type="button" class="mui-btn mui-btn-primary">蓝色</button>
+		<button type="button" class="mui-btn mui-btn-success">绿色</button>
+		<button type="button" class="mui-btn mui-btn-warning">黄色</button>
+		<button type="button" class="mui-btn mui-btn-danger">红色</button>
+		<button type="button" class="mui-btn mui-btn-royal">紫色</button> 
+				
+		<button type="button" class="mui-btn mui-btn-outlined">默认</button>
+		<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">蓝色</button>
+		<button type="button" class="mui-btn mui-btn-success mui-btn-outlined">绿色</button>
+		<button type="button" class="mui-btn mui-btn-warning mui-btn-outlined">黄色</button>
+		<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined">红色</button>
+		<button type="button" class="mui-btn mui-btn-royal mui-btn-outlined">紫色</button> 
+		<p></p>
+		<button type="button" data-loading-icon="mui-spinner mui-spinner-custom" class="mui-btn mui-btn-primary">加载</button>
+		
+		<div class="mui-card">
+			<!--页眉，放置标题-->
+			<div class="mui-card-header mui-card-media "style="height: 40vw;background-image: url(../images/3.png);">页眉</div>
+			<!--内容区-->
+			<div class="mui-card-content">内容区</div>
+			<!--页脚，放置补充信息或支持的操作-->
+			<div class="mui-card-footer">页脚</div>
+		</div>
+		<!-- 复选框 -->
+		<div class="mui-input-row mui-checkbox ">
+			<label>Checkbox</label>
+			<input name="Checkbox1" value="Item1" type="checkbox" checked>
+		</div>
+		
+		<ul class="mui-table-view mui-grid-view">
+			<li class="mui-table-view-cell mui-media mui-col-xs-6">
+				<a href="#">
+					<img class="mui-media-object" src="http://placehold.it/400x300">
+					<div class="mui-media-body">文字说明1</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-6">
+				<a href="#">
+					<img class="mui-media-object" src="http://placehold.it/400x300">
+					<div class="mui-media-body">文字说明2</div>
+				</a>
+			</li>
+		</ul>
+		
+		<div class="mui-slider">
+		  <div class="mui-slider-group mui-slider-loop">
+		    <!--支持循环，需要重复图片节点-->
+		    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="4.jpg" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="../images/1.jpg" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="../images/2.png" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="../images/3.png" /></a></div>
+		    <div class="mui-slider-item"><a href="#"><img src="../images/5.png" /></a></div>
+		    <!--支持循环，需要重复图片节点-->
+		    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="1.jpg" /></a></div>
+		  </div>
+		</div>
+		
+		<div class="mui-content">
+		    <div class="mui-row">
+		        <div class="mui-col-sm-6 mui-col-xs-12">
+		            <li class="mui-table-view-cell">
+		                <a class="mui-navigate-right">
+		                    Item 1    
+		                </a>
+		            </li>
+		        </div>
+		        <div class="mui-col-sm-6 mui-col-xs-12">
+		            <li class="mui-table-view-cell">
+		                <a class="mui-navigate-right">
+		                    Item 1
+		                </a>
+		            </li>
+		        </div>
+		    </div>
+		</div>
+		
+		<ul class="mui-table-view">
+		    <li class="mui-table-view-cell">Item 1</li>
+		    <li class="mui-table-view-cell">Item 2</li>
+		    <li class="mui-table-view-cell">Item 3</li>
+		</ul>
+		<div id="demo1" class="mui-progressbar mui-progressbar-infinite">
+			<span>11</span>
+		</div>
+		<!-- 设置 -->
+		<script src="../js/mui.js"></script>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/public.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui('.mui-scroll-wrapper').scroll()
+		</script>
+		</body>
+</html>
