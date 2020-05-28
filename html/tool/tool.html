@@ -24,10 +24,10 @@
 			</div>
 			<ul class="mui-table-view notfatherbox">
 				<li class="mui-table-view-cell shar">
-					<a class="mui-navigate-right">分享好友</a>
+					<a id="share" class="mui-navigate-right">分享好友</a>
 				</li>
 				<li class="mui-table-view-cell clearCache">
-					<a class="mui-navigate-right">删除缓存 </a>
+					<a ifd class="mui-navigate-right">删除缓存 </a>
 				</li>
 			</ul>
 			<div class="span-m">
@@ -54,30 +54,36 @@
 			<div class="ta-c pt-ab"><span class="smFontSize" id="version"></span></div>
 			<script src="../js/mui.min.js"></script>
 			<script src="../../js/mui.js"></script>
-			<!--引用公用文件-->
+			<script src="../../js/tool.js"></script>
 			<script src="../js/public.js"></script>
 			<script type="text/javascript">
 				mui.init();
 				mui.plusReady(function(){
-					mui.preload({
-						url: "about-about.html",
-						id: "about-about"
-					});
-					mui.preload({
-						url: "about-describe.html",
-						id: "about-describe"
-					});
-					mui.preload({
-						url: "about-opinion.html",
-						id: "about-opinion"
-					});
-					mui.preload({
-						url: "about-support.html",
-						id: "about-support"
-					});
 					//获取当前应用版本号
 					document.getElementById('version').innerText = "软件版本："+plus.runtime.version;
 				})
+				// 分享按钮
+				var shares = {};		
+				mui.plusReady(function() {
+					plus.share.getServices(function(s) {
+						if (s && s.length > 0) {
+							for (var i = 0; i < s.length; i++) {
+								var t = s[i];
+								shares[t.id] = t;
+							}
+						}
+					}, function() {
+						console.log("获取分享服务列表失败");
+					});
+				});
+				
+				//删除缓存功能
+				mui(".notfatherbox").on('tap', '.clearCache', function() {
+					//清除缓存
+					plus.nativeUI.toast("清除缓存成功!");
+				});
+				
+				
 			</script>
 		</body>
 	</body>

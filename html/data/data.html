@@ -34,15 +34,15 @@
 			<h1 class="mui-title">chart（EChart图表）</h1>
 		</header> -->
 		<div class="mui-content">
-			<div class="mui-content-padded">
+			<!-- <div class="mui-content-padded">
 				<p style="text-indent: 22px;">
 					用户数据
 				</p>
-			</div>
+			</div> -->
 			<div class="mui-content-padded">
-				<h5>饼图示例</h5>
+				<h5>标签分布</h5>
 				<div class="chart" id="pieChart"></div>
-				<h5>柱图示例</h5>
+				<h5>专心时间分布</h5>
 				<div class="chart" id="barChart"></div>
 				<!-- <h5>线图示例</h5>
 				<div class="chart" id="lineChart"></div> -->
@@ -61,25 +61,25 @@
 						radius: '65%',
 						center: ['50%', '50%'],
 						data: [{
-							value: 335,
-							name: '直接访问'
+							value: 635,
+							name: '上课'
 						}, {
 							value: 310,
-							name: '邮件营销'
+							name: '工作'
 						}, {
-							value: 234,
-							name: '联盟广告'
+							value: 534,
+							name: '实验'
 						}, {
 							value: 135,
-							name: '视频广告'
+							name: '娱乐'
 						}, {
 							value: 1548,
-							name: '搜索引擎'
+							name: '自习'
 						}]
 					}]
 				} : {
 					legend: {
-						data: ['蒸发量', '降水量']
+						data: [ '专注时长']
 					},
 					grid: {
 						x: 35,
@@ -120,14 +120,16 @@
 							show: true
 						}
 					}],
-					series: [{
-						name: '蒸发量',
+					series: [
+					// {
+					// 	name: '蒸发量',
+					// 	type: chartType,
+					// 	data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+					// },
+					{
+						name: '专注时长',
 						type: chartType,
-						data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
-					}, {
-						name: '降水量',
-						type: chartType,
-						data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+						data: [136, 89, 56.8, 92.1, 28.7, 70.7, 175.6, 182.2, 156, 138.8, 96.0, 102.3]
 					}]
 				};
 				return chartOption;

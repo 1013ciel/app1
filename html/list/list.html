@@ -3,7 +3,70 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
-	</head>
+		<link rel="stylesheet" href="../../css/mui.css" />
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/public.css"/>
+		<link rel="stylesheet" href="../../css/list.css"/>
+		<style type="text/css">
+			li{
+				height: 120px;
+			}
+		</style>			
 	<body>
+		<p>111</p>
+		<div>
+			<ul id="OA_task_1" class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+			    <li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red delete-font">删除</a>
+					</div>
+			        <div class="mui-slider-handle">
+			            <div>
+			                <p class="left-font">数学课</p>
+			            </div>
+			            <div class=" mui-text-right">
+			                <span class="right-font">14:00-16:00</span>
+			            </div>
+			        </div>
+			    </li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red delete-font">删除</a>
+					</div>
+				    <div class="mui-slider-handle">
+				        <div>
+				            <p class="left-font">语文课</p>
+				        </div>
+				        <div class=" mui-text-right">
+				            <span class="right-font">14:00-16:00</span>
+				        </div>
+				    </div>
+				</li>
+			</ul>
+		</div>
+		
+		
+		
+		<script src="../../js/mui.js"></script>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			(function($) {
+				var btnArray = ['确认', '取消'];
+				$('#OA_task_1').on('tap', '.mui-btn', function(event) {
+					var elem = this;
+					var li = elem.parentNode.parentNode;
+					mui.confirm('确认删除该项代办？', '！', btnArray, function(e) {
+						if (e.index == 0) {
+							li.parentNode.removeChild(li);
+						} else {
+							setTimeout(function() {
+								$.swipeoutClose(li);
+							}, 0);
+						}
+					});
+				});
+			})(mui);
+		</script>
 	</body>
 </html>
