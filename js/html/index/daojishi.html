@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../../css/mui.css" />
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/public.css"/>
+		<link rel="stylesheet" href="../../css/index.css" />
+		<style type="text/css">
+			a{
+				color: #000000;
+			}
+			a:visited{
+				color: #000000;
+			}
+			a:hover{
+				color: #000000;
+			}
+			/* span{
+				font-size: 20px;
+			} */
+			
+			
+			.exit{
+				margin-top: 40%;
+				margin-left: 40%;
+				/* border: #000000 2px solid; */
+			}
+		</style>
+	</head>
+	<body>
+		<div id="logo">
+			<img src="../../images/xuexi.jpg" />
+		</div>
+		<div id="sy">
+			<span>剩余时间：</span>
+			<span id="fen"></span><span> :</span><span id="miao">00</span>
+		</div>
+		<p></p>
+		<div class="exit">
+			<button class="button1"> <a href="javascript:history.back(-1)">取消</a> </button>
+		</div>
+		
+
+		<script type="text/javascript" src="../../js/jquery.js"></script>
+		<script type="text/javascript">
+			// 倒计时函数
+			function djs(){
+				var mtime=document.getElementById("fen").innerText;
+				var stime=document.getElementById("miao").innerText;
+				if(mtime==0 && stime==0){
+					return ;
+				}
+				stime--;
+				if(mtime>0 && stime==-1){
+					mtime--;
+					stime=59;
+				}
+				if(stime<10){
+					stime='0'+stime;
+				}
+				setTimeout("djs()",1000);
+				document.getElementById("fen").innerText=mtime;
+				document.getElementById("miao").innerText=stime;
+			}
+			
+			// 将index.html中的数据传到本页面中
+			function getParameter(param)
+			{
+
+            var aaa = document.getElementById('fen');
+            var query = decodeURI(window.location.search);//获取当前路径？后的字符串  并解码
+            console.log(query);
+            var iLen = param.length;//3
+            var iStart = query.indexOf(param);//1
+
+ 
+
+            if (iStart == -1)
+            return "";
+            iStart += iLen + 1;//4
+            var va = query.substring(iStart);//截取参数
+            aaa.innerHTML = va;
+            
+            
+            }
+            
+            $(document).ready(function () {
+            var one = getParameter('one');
+            });
+			
+			window.onload=djs;
+			
+		</script>
+	</body>
+</html>

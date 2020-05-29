@@ -1,0 +1,24 @@
+{
+  "name": "app1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  // "main":"js/sqlconnect.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1013ciel/app1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1013ciel/app1/issues"
+  },
+  "homepage": "https://github.com/1013ciel/app1#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}

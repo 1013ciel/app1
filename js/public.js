@@ -48,17 +48,6 @@ mui(".notfatherbox").on('tap', '.clearCache', function() {
 	plus.nativeUI.toast("清除缓存成功!");
 });
 
-//检查更新功能
-mui(".notfatherbox").on('tap', '.update', function() {
-	//清除缓存
-	plus.nativeUI.toast("当前已经是最新版本!");
-});
-
-//分享功能
-mui(".notfatherbox").on('tap', '.shar', function() {
-	//清除缓存
-	plus.nativeUI.toast("正在开发!");
-});
 
 //页面暂时还未开发完成提示
 mui(".nofatherbox").on('tap', '.publicjumppage', function() {
