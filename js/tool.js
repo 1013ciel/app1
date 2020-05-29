@@ -51,11 +51,11 @@ function shareMessage(share, ex) {
 			scene: ex
 		}
 	};
-	msg.href = "https://www.cnblogs.com/hwinter/";
+	msg.href = "https://github.com/1013ciel/app1";
 	msg.title = "focus--时间管理软件(暂未完成)";
 	msg.content = "我正在使用focus，你也来和我一起体验吧";
 	if (~share.id.indexOf('weibo')) {
-		msg.content += "；体验地址：https://www.cnblogs.com/hwinter/";
+		msg.content += "；体验地址：https://github.com/1013ciel/app1";
 	}
 	msg.thumbs = ["_www/images/logo.png"];
 	share.send(msg, function() {
